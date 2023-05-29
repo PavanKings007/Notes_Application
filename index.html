@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Pad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="over_header">
+
+    </div>
+    <header id="header_tag" onclick="remove_Note(event)">
+        <div id="sandwich_Bar" >
+            <div onclick="hide_side_bar()" id="inner_sandwich_div">
+            <img src="icons/sider icon.png" alt="https://icons8.com/icon/zfSqbeGa3g06/four-squares" id="icon_side">
+             </div>
+        </div>
+
+        <div id="search_Bar" onclick="search_box()">
+            <img src="icons/icons8-search-70.png" alt="https://icons8.com/icon/111487/search" id="search_in_img">
+            <input type="search" placeholder="search........." id="search_in_input">
+        </div>
+
+        <div id="add_New_Note" onclick="addDiv()" >
+            <img src="icons/icons8-add-70.png" alt="https://icons8.com/icon/11153/plus-math" >
+            <p>New Note</p>
+        </div>
+    </header>
+
+    <main>
+        <div id="side_Liner" onclick="remove_Note(event)">
+            <div onclick="display_all_created_notes()" id="note_title_sider">
+                <img src="icons/icons8-note-70.png" alt="Note">
+                <p class="pTag">Note</p>
+            </div>
+            <div onclick="" >
+                <img src="icons/icons8-task-70.png" alt="Task">
+                <p class="pTag">Task</p>
+            </div>
+            <div id="reminder" onclick="">
+                <img src="icons/icons8-reminder-70.png" alt="Reminder">
+                <p class="pTag">Reminders</p>
+            </div>
+            <div onclick="arch_algo()" id="archive">
+                <img src="icons/icons8-archive-70.png" alt="Archive">
+                <p class="pTag">Archive</p>
+            </div>
+            <div onclick="trash_algo()" >
+                <img src="icons/icons8-trash-70.png" alt="Trash">
+                <p class="pTag" id="trash">Trash</p>
+            </div>
+            <div onclick="all_()" id="all_note">
+                <img src="icons/icons8-select-all-70.png" alt="All">
+                <p class="pTag">All</p>
+            </div>
+        </div>
+        <div id="main_display" onclick="remove_Note(event)">
+            <!-- <h1>hello</h1> -->
+        </div>
+            <div id="main_Note">
+            <form onsubmit="event.preventDefault(); get_details_from_form()" id="">
+                <input type="text" placeholder="Title" id="input_title" required/>
+                <textarea id="input_note" cols="70" rows="15" placeholder="Note..........."></textarea>
+                <div id="color_and_submit">
+                <div id="color_submit"> 
+                <div id="color_button" >
+                    <button name="1" onmouseover="change_bg('#a9a9ee')"  onclick="change_bg('#8383E0')" type="button"></button>
+                    <button name="2" onmouseover="change_bg('#F0A9D0')" onclick="change_bg('#F0A9D0')" type="button"></button>
+                    <button name="3" onmouseover="change_bg('#F0A9A9')" onclick="change_bg('#F0A9A9')" type="button"></button>
+                    <button name="4" onmouseover="change_bg('#A9F0B4')" onclick="change_bg('#A9F0B4')" type="button"></button>
+                    <button name="5" onmouseover="change_bg('#F0D4A9')" onclick="change_bg('#F0D4A9')" type="button"></button>
+                    <button name="6" onmouseover="change_bg('#BCA9F0')" onclick="change_bg('#BCA9F0')" type="button"></button>
+                    <button name="7" onmouseover="change_bg('#DCEAF5')" onclick="change_bg('#DCEAF5')" type="button"></button>
+                    <button name="8" onmouseover="change_bg('#96DFD0')" onclick="change_bg('#96DFD0')" type="button"></button>
+                   
+                </div>
+                 <div id="arrow">
+                        <button id="arrow_butt" type="button" onmouseover="extend_color_section()"><img src="icons/icons8-chevron-right-70-removebg-preview.png" alt=""></button>
+                    </div>
+                
+            </div>
+            <button id="add_note_button" onclick="remove_Note(event); display_all_created_notes()">Add Note</button>
+        </div>
+            </form>
+            </div>
+        
+    </main>
+
+<!--................. Script tags ........................-->
+    <script src="code.js"></script>
+    <script src="creat_New_Note_Code.js"></script>
+    <script src="Note_algoritem.js"></script>
+    <script src="all_note_algo.js"></script>
+    <script src="Archive_algo_adding_in_arch_obj.js"></script>
+    <script src="delete_note_and_add_to_trash.js"></script>
+    <script src="main_display_tag_containing_all_objects.js"></script>
+    
+</body>
+</html>

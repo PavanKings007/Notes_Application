@@ -1,0 +1,495 @@
+html, body{
+    background-color: aliceblue;
+    margin: 0;
+    height:-webkit-fill-available;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(9, 209, 169);
+    justify-content: space-between;
+    box-shadow: 0 0 2px 2px #ccc;
+    
+}
+#over_header{
+    display: none;
+    width: 100%;
+    height: 6.4vw;
+    align-items: center;
+    background-color: rgb(9, 209, 169);
+    justify-content: center;
+    box-shadow: 0 0 2px 2px #ccc;
+}
+#on_check_click,#on_check_click_archive,#on_check_click_cross{
+    height: 3vw;
+    width: 7vw;
+    border-radius: 1vw;
+    background-color: transparent;
+    border-color: white;
+    border: 1px groove rgb(141, 227, 210);
+    font-size: 1.6vw;
+    /* margin-left: 1vw;
+    margin-right: 0.5vw; */
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+#on_check_click{
+    margin-right: 0.5vw;
+}
+#on_check_click_cross{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 0.5vw;
+    margin-left: 0.5vw;
+}
+.shrink_check_box_archive_delete_buttons {
+    transform: scale(0.9);
+  }
+#on_check_click:hover,#on_check_click_archive:hover,#on_check_click_cross:hover{
+    box-shadow:3px 6px 10px rgb(45, 45, 45), -3px 2px 10px rgb(45, 45, 45);
+}
+/* ..................icon tage.......................... */
+#sandwich_Bar div{
+    width: 2vw;
+    height: 2vw;
+    padding: 0.2vw;
+    border-radius: 10vw;
+    margin: 2vw;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition:box-shadow 0.5s ease-in-out ;
+    
+}
+#sandwich_Bar div:hover{
+    box-shadow:3px 6px 10px rgb(45, 45, 45), -3px 2px 10px rgb(45, 45, 45);
+}
+#inner_sandwich_div {
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .shrink {
+    transform: scale(0.9);
+  }
+  
+#sandwich_Bar img{
+    width: 2.5vw;
+    transition: transform 0.2s ease-in-out;
+
+}
+#sandwich_Bar img:hover{
+    transform: scale(1.1);  
+
+}
+/* ...............search bar............................... */
+#search_Bar{
+    display: flex;
+    width: fit-content;
+    min-height: 100%;
+    justify-content: center;
+    /* box-shadow:3px 6px 10px rgb(45, 45, 45), -3px 2px 10px rgb(45, 45, 45); */
+    border-radius: 1vw;
+}
+#search_Bar input{
+    width: 35vw;
+    border-radius: 1vw;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    outline: none;
+    border: 1px solid rgb(230, 230, 230);
+    border-left: 0;
+    background-color: #d2dbe3;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.1vw;
+    color: rgb(53, 52, 52);
+    padding-left: 1vw;
+}
+
+#search_Bar input::placeholder{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(46, 45, 45);
+}
+
+#search_Bar img{
+    border: 1px solid rgb(230, 230, 230);
+    height: 1.9vw;
+    background-color: #d2dbe3;
+    border-right: 0;
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    cursor: pointer;
+    padding-left: 0.5vw;
+}
+
+/* .............................add Note..................... */
+#add_New_Note{
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(234, 241, 247); */
+    padding: 0 1vw 0 1vw;
+    border-radius: 1vw;
+    
+    margin-right: 2vw;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
+}
+#add_New_Note p{
+    font-size: 1.3vw;
+    color: black;
+    margin: 0;
+    font-weight:bolder;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#add_New_Note img{
+    padding-right: 1vw;
+    height: 2.5vw;
+}  
+.shrink_Note {
+    transform: scale(0.9);
+  }
+  #add_New_Note:hover {
+    box-shadow:3px 6px 10px rgb(45, 45, 45), -3px 2px 10px rgb(45, 45, 45);
+
+  }
+/* .........................side Linear............................ */
+#side_Liner{
+    width: 15vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.876);
+    border-right: 2px solid white;
+    box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+   display: flex;
+   flex-direction: column;
+   align-items:center;
+   padding: 0.5vw;
+   justify-content: space-around;
+   position: relative;
+   left: -3px;
+}
+#side_Liner div{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* border-bottom: 5px solid white; */
+    width: 100%;
+    border-bottom-right-radius: 1vw;
+    border-top-right-radius: 1vw;
+    bottom: 1vw;
+    margin-right: 0.5vw;
+    transition: transform 0.2s ease-in-out;
+    /* justify-content: space-between; */
+}
+#side_Liner div:hover{
+    cursor: pointer;
+   
+    background-color: rgb(255, 230, 0);
+   
+}
+
+#side_Liner p{
+    margin-top: 0;
+    color:white;
+    font-weight: bold;
+    font-size: 2vw;
+    cursor: pointer;
+    margin: 0;
+    margin-left: 1vw;
+    /* padding-right: 8vw; */
+   
+}
+#side_Liner div:hover p{
+    color: black;
+}
+
+#side_Liner img{
+    width: 2.6vw;
+    cursor: pointer;
+}
+#side_Liner div:hover img{
+    filter: brightness(0%);
+}
+#side_Liner img:hover{
+    transform: scale(1.1);
+}
+/* ..........................main Note display................... */
+main{
+    display: flex;
+}
+#main_display{
+    width: 100%;
+    background-color:aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-content: baseline;
+}
+/* ...................main note form hiden................... */
+#main_Note{
+    width: auto;
+    height: 48%;
+    background-color: rgb(150, 223, 208);
+    display: none;
+    padding: 1vw;
+    position: fixed;
+    right: 25%;
+    top: 25%;
+    border-radius: 2vw;
+}
+#main_Note form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+form input{
+   border: 0;
+    height: 2vw;
+    background-color: transparent;
+    outline: none;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.2vw;
+    color: #323131;
+}
+form input::placeholder{
+    font-family:cursive;
+    color: rgb(97, 94, 94);
+    
+}
+form textarea{
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1vw;
+}
+form textarea::placeholder{
+    font-family:cursive;
+    color: rgb(97, 94, 94);
+   
+}
+#color_submit{
+    display: flex;
+    align-items: center;
+}
+#color_and_submit{
+    display: flex;
+    justify-content: space-between;
+}
+textarea{
+    resize: none;
+}
+#add_note_button{
+    width: 8vw;
+    height: 2.5vw;
+    border-radius: 2vw;
+    background-color: transparent;
+    font-family: cursive;
+    font-size: 1vw;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    /* backface-visibility: hidden; */
+
+}
+#add_note_button:hover{
+    background-color: rgb(41, 134, 103);
+    color: white;
+}
+#color_button{
+    display: flex;
+    overflow: hidden;
+    /* background-color: red; */
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    width: 10%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 4px;
+    padding-left: 3px;
+    
+}
+#color_button button {
+    padding: 20px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 5px;
+    border: 0;
+
+ }
+
+
+#color_button :nth-child(1){
+    
+    background-color: #a9a9ee;
+    transition: transform 0.7s ease-in-out;
+
+}
+#color_button :nth-child(2){
+    background-color: #F0A9D0;
+    transition: transform 0.7s ease-in-out;
+
+}
+#color_button :nth-child(3){
+    background-color: #F0A9A9;
+    transition: transform 0.7s ease-in-out;
+
+}
+#color_button :nth-child(4){
+    background-color: #A9F0B4;
+    transition: transform 0.7s ease-in-out;
+    
+}
+#color_button :nth-child(5){
+    background-color: #F0D4A9;
+    transition: transform 0.7s ease-in-out;
+
+}
+#color_button :nth-child(6){
+    background-color: #BCA9F0;
+    transition: transform 0.7s ease-in-out;
+
+}
+#color_button :nth-child(7){
+    background-color: #DCEAF5;
+    transition: transform 0.7s ease-in-out;
+    
+
+}
+#color_button :nth-child(8){
+    background-color: #96DFD0;
+    transition: transform 0.7s ease-in-out;
+    
+
+}
+#color_button :nth-child(1):hover{
+    transform: scale(1.1);
+    border: 2px solid black;
+
+}
+#color_button :nth-child(2):hover{
+    transform: scale(1.1);
+    border: 2px solid black;
+
+}
+#color_button :nth-child(3):hover{
+    transform: scale(1.1);
+    border: 2px solid black;
+   
+
+}
+#color_button :nth-child(4):hover{
+    transform: scale(1.1);
+    border: 2px solid black;
+   
+    
+}
+#color_button :nth-child(5):hover{
+    transform: scale(1.1);
+    border: 2px solid black;
+    
+
+}
+#color_button :nth-child(6):hover{
+    transform: scale(1.1);
+    border: 2px solid black;
+
+
+}
+#color_button :nth-child(7):hover{
+    transform: scale(1.1);
+    border: 2px solid black;
+
+
+}
+#color_button :nth-child(8):hover{
+    transform: scale(1.1);
+    border: 2px solid black;
+
+
+}
+#arrow button{
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    margin-left: 0.5vw;
+    transition: transform 1s ease-in-out;
+    display: flex;
+    border-radius: 50%;
+}
+#arrow button img{
+    width: 1vw;
+    height: 2.8vh;
+}
+#arrow button:hover{
+    transform: scale(1.3);
+}
+/* ...................algorithem code id's........... */
+#note_algo_div{
+    width: 15vw;
+    padding: 5px;
+    border-radius: 15px;
+    margin: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+#note_algo_title{
+    font-size: 1.2vw;
+    color: #252424;
+    margin-bottom: 0.2vw;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#note_algo_note{
+    font-size: 0.9vw;
+    margin: 0;
+    color:#3e3c3c;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#time_div{
+    display: flex;
+    flex-direction: row-reverse;
+}
+#note_algo_time{
+    font-size: 0.8vw;
+    color: #3d3c3cdb;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#check_box_containts{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 0.5vw;
+}
+#edit_note,#archive_note,#delet_note{
+    background-color: transparent;
+    padding: 0;
+    border-radius: 19px;
+    border: none;
+    cursor: pointer;
+}
+#edit_note:hover,#archive_note:hover,#delet_note:hover{
+    box-shadow: 0px 4px 3px 1px rgba(59, 59, 59, 0.568);
+}
+#edit_icon,#archive_icon,#delet_icon{
+    width: 1.59vw;
+    border-radius: 20px;
+    display: flex;
+}
+#note_display_check_box{
+    margin: 0;
+    width: 1.1vw;
+    accent-color: black;
+}
+
+#innner_div{
+    display: flex;
+    flex-wrap: wrap;
+}
