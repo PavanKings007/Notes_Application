@@ -5,7 +5,6 @@ function delete_(index){
   localStorage.setItem("Trash",JSON.stringify(delet_obj));
   localStorage.setItem("Note", JSON.stringify(obj));
 }
-// let obj = JSON.parse(localStorage.getItem("Note")) || [];
 
 function deleteCheckedItems() {
   let deletedItems = [];
@@ -17,14 +16,12 @@ function deleteCheckedItems() {
       remainingItems.push(obj[j]);
     }
   }
-  // console.log(deletedItems);
   obj = remainingItems;
   localStorage.setItem("Note", JSON.stringify(obj));
   multi_delete(deletedItems);
   remove_items_in_html(deletedItems);
 }
 function remove_items_in_html(deletedItems){
-  // let delete_in_html=document.getElementById("note_algo_div");
 
   for(let i=0;i<deletedItems.length;i++){
     let id_=deletedItems[i].id;
@@ -44,9 +41,10 @@ function multi_delete(deletedItems) {
   }
 
   let trash = JSON.parse(localStorage.getItem("Trash"));
-  // console.log(...deletedItems);
   trash.push(...deletedItems);
-  console.log(trash);
   localStorage.setItem("Trash", JSON.stringify(trash));
   
 }
+
+
+

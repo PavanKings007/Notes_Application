@@ -50,12 +50,4 @@ function archiveCheckedItems(){
     localStorage.setItem("Archive", JSON.stringify(archive));
     
   }
-  // function remove_check_boxs(){
-  //   document.getElementById("over_header").style.display="none";
-  //   document.getElementById("header_tag").style.display="flex";
-  //   var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-  // checkboxes.forEach(function(checkbox) {
-  //   checkbox.checked = false;
-  // });
-  // }
+  

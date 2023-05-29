@@ -5,14 +5,7 @@ let archive_obj=JSON.parse(localStorage.getItem("Archive")) || [] ;
 
 let delet_obj=JSON.parse(localStorage.getItem("Trash")) || [];
 
-// function display_all_created_notes(){
-//     let main_down_button=document.getElementById("main_Note");
-//     main_down_button.style.display="none";
-//     let dis=document.getElementById("main_display");
-//     // dis.append(note_algo());
 
-    
-// }
 
 
 function display_all_created_notes(){
@@ -23,13 +16,27 @@ function display_all_created_notes(){
     
         note_algo(obj,"Note");
         
-        
-
-        // get_details_from_form();
-
+        document.getElementById("myform").addEventListener("submit", function(event) {
+           
+            // document.getElementById("myInput").value = "";
+         document.getElementById("input_title").value="";
+            document.getElementById("input_note").value="";
+          
+            // You can perform any other actions here, such as submitting the form data to a server
+          });
+          let siderTagsColorFix = document.getElementById("side_Liner");
+          let divToModify = siderTagsColorFix.querySelector("div");
+          
+          divToModify.style.backgroundColor = "#ffe600";
+          let imgTags = divToModify.querySelectorAll("img");
+          let pTags = divToModify.querySelectorAll("p");
+          imgTags[0].style.filter = "brightness(0%)";
+          pTags[0].style.color = "black";
 
 
 }
+window.onload=document.getElementById("myform");
+
 // document.addEventListener("click", remove_Note);
 function remove_Note(event){
     let blur_Effect=document.getElementById("main_display");
@@ -64,7 +71,7 @@ function arch_algo() {
 let archive_obj=JSON.parse(localStorage.getItem("Archive")) || [] ;
    
 let side_box=document.getElementById("side_Liner");
-side_box.style.height="auto";
+side_box.style.height="100vh";
 
     const display_on_this = document.getElementById("main_display");
     display_on_this.innerHTML = "";
@@ -88,6 +95,9 @@ function trash_algo() {
 }
     function all_() {
         
+
+        
+
         let side_box=document.getElementById("side_Liner");
         side_box.style.height="auto";
 
@@ -106,6 +116,8 @@ function trash_algo() {
     display_on_this.append(h1_tag_2);
 
     h1_tag_2.innerHTML="Archive";
+let archive_obj=JSON.parse(localStorage.getItem("Archive")) || [] ;
+
         main_algo(archive_obj, "Archive");
         display_on_this.innerHTML += "<br>"; 
 
@@ -113,6 +125,7 @@ function trash_algo() {
     display_on_this.append(h1_tag_3);
 
     h1_tag_3.innerHTML="Trash";
+    let delet_obj=JSON.parse(localStorage.getItem("Trash")) || [];
 
         main_algo(delet_obj, "Trash");
         
@@ -143,20 +156,9 @@ function get_details_from_form(){
     obj.push(newObj);
     localStorage.setItem("Note",JSON.stringify(obj));
     display_all_created_notes();
-    // document.addEventListener("click", remove_Note);
-
-    // dele();
-    // localStorage.clear();
-    // count=-1;
-    // console.log();
-    // localStorage.setItem("demo", obj[1].title)
+   
   }
-// })
-// function dele(){
-//     let obj = JSON.parse(localStorage.getItem("Note")) || [];
-//     obj.splice(1,1);
-//     localStorage.setItem("Note", JSON.stringify(obj));
-// }
+
 function change_bg(color) {
     let main_Note = document.getElementById("main_Note");
     main_Note.style.backgroundColor = color;
@@ -167,5 +169,4 @@ function reset_change_bg(){
     let main_Note = document.getElementById("main_Note");
     main_Note.style.backgroundColor = "";
 }
-
 

@@ -60,8 +60,8 @@
             <!-- <h1>hello</h1> -->
         </div>
             <div id="main_Note">
-            <form onsubmit="event.preventDefault(); get_details_from_form()" id="">
-                <input type="text" placeholder="Title" id="input_title" required/>
+            <form onsubmit="event.preventDefault(); get_details_from_form(); " id="myform">
+                <input type="text" placeholder="Title" id="input_title" name="title" required/>
                 <textarea id="input_note" cols="70" rows="15" placeholder="Note..........."></textarea>
                 <div id="color_and_submit">
                 <div id="color_submit"> 
@@ -92,10 +92,10 @@
     <script src="code.js"></script>
     <script src="creat_New_Note_Code.js"></script>
     <script src="Note_algoritem.js"></script>
+    <script src="main_display_tag_containing_all_objects.js"></script>
     <script src="all_note_algo.js"></script>
     <script src="Archive_algo_adding_in_arch_obj.js"></script>
     <script src="delete_note_and_add_to_trash.js"></script>
-    <script src="main_display_tag_containing_all_objects.js"></script>
     
 </body>
 </html>
