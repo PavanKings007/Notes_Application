@@ -1,4 +1,4 @@
-function add_fresh_note(color){
+function add_fresh_note(){
     let blur_Effect=document.getElementById("main_display");
     let side_info_div=document.getElementById("side_Liner");
     let form_display=document.getElementById("main_Note");

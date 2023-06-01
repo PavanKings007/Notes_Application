@@ -38,14 +38,19 @@ function main_algo(object_,obj_name){
 
     let check_box_containts=document.createElement("div");
     check_box_containts.id="check_box_containts"
-
+// ...............edit Items................................
     let edit_note=document.createElement("button");
     edit_note.id="edit_note";
     let edit_icon=document.createElement("img");
     edit_icon.src="icons/icons8-edit-note.png";
     edit_icon.id="edit_icon";
     edit_note.append(edit_icon);
+    edit_note.addEventListener('click',function (){
+    editNote(i);
 
+    });
+
+// ..........................................................
     let archive_note=document.createElement("button");
     archive_note.id="archive_note";
     let archive_icon=document.createElement("img");
@@ -56,7 +61,6 @@ function main_algo(object_,obj_name){
       archive_note.append(archive_icon);
       archive_note.onclick=function(){
         archive_upload(i);
-        note_display_div.remove();
     }
   }
   else if(obj_name==="Trash"){
